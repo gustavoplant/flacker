@@ -2,7 +2,7 @@ import 'package:flacker/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'model/user_location.dart';
+import 'model/current_location.dart';
 import 'services/location_service.dart';
 
 void main() => runApp(MyApp());

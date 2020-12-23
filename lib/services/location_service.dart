@@ -1,10 +1,12 @@
 import 'dart:async';
 
-import 'package:flacker/model/user_location.dart';
+import 'package:flacker/model/current_location.dart';
 import 'package:location/location.dart';
+import 'package:flacker/services/database_service.dart';
 
 class LocationService {
   Location location = new Location();
+  Database _db = new Database();
 
   bool _serviceEnabled;
   PermissionStatus _permissionGranted;
@@ -12,6 +14,8 @@ class LocationService {
   CurrentLocation _currentLocation;
 
   LocationService() {
+
+    //_connectDB();
 
     try {
       _enableLocation();
@@ -22,7 +26,8 @@ class LocationService {
         if (_permissionGranted != null) {
           location.onLocationChanged.listen((locationData) {
             if (locationData != null) {
-              _locationController.add(CurrentLocation(
+
+              var newLocation = new CurrentLocation(
                 latitude: locationData.latitude,
                 longitude: locationData.longitude,
                 accuracy: locationData.accuracy,
@@ -31,20 +36,33 @@ class LocationService {
                 speed: locationData.speed,
                 speedAccuracy: locationData.speedAccuracy,
                 time: locationData.time,
-              ));
+              );
+
               print("location changed! "
                 + " LAT " + locationData.latitude.toString()
                 + " LOG " + locationData.longitude.toString()
                 + " TIME: " + locationData.time.toString());
+
+              _locationController.add(newLocation);
+
+              // salva a localizacao no banco
+              // newLocation.save();
+
+
             }
           });
         }
       });
 
+      
 
     } catch (e) {
       print("EXCEPTION:" + e.toString());
     }
+  }
+
+  _connectDB() async {
+    _db.openBox('posicoes');
   }
 
   // Function para habilitar o serviço de GPS

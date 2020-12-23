@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'model/user_location.dart';
+import 'model/current_location.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key key}) : super(key: key);
@@ -25,12 +25,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'Latitude: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.latitude}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -39,12 +39,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'Longitude: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.longitude}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -53,12 +53,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'accuracy: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.accuracy}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -67,12 +67,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'altitude: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.altitude}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -81,12 +81,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'heading: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.heading}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -95,12 +95,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'speed: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.speed}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -109,12 +109,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'speedAccuracy: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.speedAccuracy}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -123,12 +123,12 @@ class HomeView extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'time: ',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           '${userLocation?.time}',
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
                         ),
                       ],
